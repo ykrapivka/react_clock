@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { Clock } from './Components.tsx/Clock';
+import { Clock } from './Components/Clock';
 
 type State = {
   clockName: string;
@@ -19,7 +19,7 @@ export class App extends React.Component {
     hasClock: true,
   };
 
-  timerId = 0;
+  timerId: number = 0;
 
   componentDidMount(): void {
     this.timerId = window.setInterval(() => {
